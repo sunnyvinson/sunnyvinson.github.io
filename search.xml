@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[JVM工作原理]]></title>
-      <url>%2F2017%2F02%2F27%2FJVM%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%2F</url>
-      <content type="text"><![CDATA[Java笔记1 – Java虚拟机工作原理分析JVM组成Class Loader SubSystem (类加载器)Runtime Data Areas (运行时数据区)Execution Engine (执行引擎)简述各部分的作用]]></content>
+      <title><![CDATA[Java之JVM探索]]></title>
+      <url>%2F2017%2F02%2F27%2FJava%E4%B9%8BJVM%E6%8E%A2%E7%B4%A2%2F</url>
+      <content type="text"><![CDATA[前言：Java是一种编程技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)。 （一）JVM的组成Class Loader SubSystem (类加载器)Runtime Data Areas (运行时数据区)Execution Engine (执行引擎)（二）简述各部分的作用]]></content>
     </entry>
 
     
