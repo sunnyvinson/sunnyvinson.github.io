@@ -10,6 +10,13 @@
 
     
     <entry>
+      <title><![CDATA[Java之static关键字]]></title>
+      <url>%2F2016%2F02%2F27%2FJava%E4%B9%8Bstatic%E5%85%B3%E9%94%AE%E5%AD%97%2F</url>
+      <content type="text"><![CDATA[static关键字主要有两种作用第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。第二 实现某个方法或属性与类相关联。 具体用法如下： static成员变量 静态变量属于类，在内存中只有一个复制，只要静态变量所在的类被加载，这个静态变量就会被分配空间，因此就可以被使用了。两种方式分别是“类.静态变量”和”对象.静态变量”。 实例变量属于对象，只有对象被创建后，实例变量才会被分配内存空间，才能被使用，它在内存中存在多个复制，只有用“对象.实例变量”的方式来引用。 static成员方法 static方法是类的方法，不需要创建对象就可以被调用，而非static方法是对象的方法，只有对象被创建出来后才可以被使用。 static方法中不能使用this和super关键字，不能调用非static方法，只能访问所属类的静态成员变量和成员方法，static方法也不能访问非static类型的变量。因为当static方法被调用时，这个类的对象可能还没被创建，即使已经被创建了，也无法确定调用哪个对象的方法。重要用途就是单例模式的应用。 static代码块： static代码块在类中是独立于成员变量和成员函数的代码块的。 注意：这些static代码块只会被执行一次。 static内部类 OuterClassObject.new InnerClassName()，如果省略了OuterClassObject则是this. new InnerClassName(),OuterClassObject或者this指代创建这个内部类对象的一个外部类对象，是一个隐式参数，它将传入内部类的构造方法(见前所述)。但是现在这个内部类对象是由“类”直接创建的，不会产生这样的一个隐式参数传入内部类构造方法，因此内部类也就不需要“编译器自动给内部类加上一个reference，指向产生它的那个外部类的对象”，所以我们把这个内部类声明为static。 不允许在函数内部定义static变量根据上文可以得知，在Java语言中，不能在成员函数内部定义static变量，以下代码将会编译失败： class CT{public void testStatic(){ static int i=0; //编译失败 System.out.println(i++); }}]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[TCP协议三次握手的过程]]></title>
       <url>%2F2016%2F01%2F23%2FTCP%E5%8D%8F%E8%AE%AE%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E7%9A%84%E8%BF%87%E7%A8%8B%2F</url>
       <content type="text"><![CDATA[TCP协议TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。 三次握手TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。 TCP报文格式TCP报文格式示意图：上图中有几个字段需要重点介绍下： （1）序号：Seq序号，占32位，用来标识从TCP源端向目的端发送的字节流，发起方发送数据时对此进行标记。 （2）确认序号：ack序号，占32位，只有ACK标志位为1时，确认序号字段才有效，ack=Seq+1。 （3）标志位：共6个，即URG、ACK、PSH、RST、SYN、FIN等，具体含义如下： （A）URG：紧急指针（urgent pointer）有效。 （B）ACK：确认序号有效。 （C）PSH：接收方应该尽快将这个报文交给应用层。 （D）RST：重置连接。 （E）SYN：发起一个新连接。 （F）FIN：释放一个连接。 需要注意的是： （A）不要将确认序号ack与标志位中的ACK搞混了(为了区分，进行大小写，ack为序列号)。 （B）确认方Ack=发起方Seq+1，两端配对。 TCP三次握手过程TCP三次握手示意图如下： 第一次握手:客户端发送syn包 (syn=1，seq=j) 到服务器，并进入SYN_SEND状态，等待服务器确认。 第二次握手:服务器收到syn包，必须确认客户的syn（ack=j+1），同时自己也发送一个SYN包（syn=1，确认序号有效ACK=1，ack=seq+ACK，seq=k），也叫syn+ack包，此时服务器进入SYN_RECV状态。 第三次握手:客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(包括了ACK=1，ack=seq+ACK) ，此包发送完毕，服务器端收到后，确认seq值与ack=1则连接建立成功。客户端和服务器进入ESTABLISHED状态，完成三次握手，传送数据。]]></content>
