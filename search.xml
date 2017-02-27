@@ -10,13 +10,6 @@
 
     
     <entry>
-      <title><![CDATA[Java开发积木之路]]></title>
-      <url>%2F2017%2F02%2F03%2FJava%E5%BC%80%E5%8F%91%E7%A7%AF%E6%9C%A8%E4%B9%8B%E8%B7%AF%2F</url>
-      <content type="text"><![CDATA[JAVA成神之路 —— 积木1System.Out.Println(" hello world to JAVA !"); JAVA：JAVA 、JVM 、 GC 、Reflect DB:Oracle 、 MySQL 、MongoDB 中间件技术：Nignx 、 TomcatOpen Source Framework :Dubbo Linux]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>%2F2017%2F02%2F01%2Fhello-world%2F</url>
       <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
