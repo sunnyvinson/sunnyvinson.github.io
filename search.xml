@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[JVM工作原理]]></title>
+      <url>%2F2017%2F02%2F27%2FJVM%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%2F</url>
+      <content type="text"><![CDATA[Java笔记1 – Java虚拟机工作原理分析JVM组成Class Loader SubSystem (类加载器)Runtime Data Areas (运行时数据区)Execution Engine (执行引擎)简述各部分的作用]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Java开发积木之路]]></title>
       <url>%2F2017%2F02%2F03%2FJava%E5%BC%80%E5%8F%91%E7%A7%AF%E6%9C%A8%E4%B9%8B%E8%B7%AF%2F</url>
       <content type="text"><![CDATA[JAVA成神之路 —— 积木1System.Out.Println(" hello world to JAVA !"); JAVA：JAVA 、JVM 、 GC 、Reflect DB:Oracle 、 MySQL 、MongoDB 中间件技术：Nignx 、 TomcatOpen Source Framework :Dubbo Linux]]></content>
