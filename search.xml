@@ -4,8 +4,8 @@
     
     <entry>
       <title><![CDATA[Java之JVM探索]]></title>
-      <url>%2F2017%2F02%2F27%2FJava%E4%B9%8BJVM%E6%8E%A2%E7%B4%A2%2F</url>
-      <content type="text"><![CDATA[前言：Java是一种编程技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)。 （一）JVM的组成*Class Loader SubSystem (类加载器)**Runtime Data Areas (运行时数据区)**Execution Engine (执行引擎)* （二）简述各部分的作用]]></content>
+      <url>%2F2017%2F02%2F01%2FJava%E4%B9%8BJVM%E6%8E%A2%E7%B4%A2%2F</url>
+      <content type="text"><![CDATA[前言：Java是一种技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)，本文章对JVM虚拟机(JVM)做一个概括性的总结，以便需要之时可以查阅。 （一）JVM的组成* Class Loader SubSystem (类加载器)* Runtime Data Areas (运行时数据区)* Execution Engine (执行引擎) （二）简述各部分的作用Class Loader SubSystem装载.class字节码到Java 虚拟机中，读取 Java 字节代码，并转换成 java.lang.Class类的一个实例。通过此实例的 newInstance()方法就可以创建出该类的一个对象。类装载器的组成：（1）引导类加载器（bootstrap class loader）：用来加载 Java 的核心库。（2）扩展类加载器（extensions class loader）：用来加载 Java 的扩展库。（3）系统类加载器（system class loader）：根据Java应用的类路径（CLASSPATH）来加载Java 类。一般来说，Java应用的类都是由它来完成加载的。 Runtime Data Areas运行时数据区指JVM在运行期间，其对计算机内存空间的划分和分配。运行时数据区组成有：（1）Method Area：方法区（主要有运行时常量池、类型信息、字段信息、方法信息、类变量，指向class实例的引用。存储已被虚拟机加载的类信息、常量、静态变量，即编译器变异后的代码等数据）（2）heap：堆,用来保存对象的实例（3）Stack Area：虚拟机栈（为每个运行的Java方法创建一个栈帧，来存储局部变量表、操作栈、动态链接、方法出口、返回值等）（4）PC：指令计数器（5）Native Method Stack：本地方法栈（调用本地方法时创建，和VM stack相似） Execution Engine执行字节码，或者执行本地方法。]]></content>
     </entry>
 
     
