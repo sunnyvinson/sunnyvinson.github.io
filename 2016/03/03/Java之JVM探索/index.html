@@ -95,7 +95,7 @@
 <meta property="og:description" content="前言：Java是一种技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)，本文章对JVM虚拟机(JVM)做一个概括性的总结，以便需要之时可以查阅。">
 <meta property="og:image" content="https://sunnyvinson.github.io/jvm.png">
 <meta property="og:image" content="https://sunnyvinson.github.io/min_maj_fullgc.png">
-<meta property="og:updated_time" content="2017-02-27T14:54:38.066Z">
+<meta property="og:updated_time" content="2017-02-27T16:28:33.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java之JVM探索">
 <meta name="twitter:description" content="前言：Java是一种技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)，本文章对JVM虚拟机(JVM)做一个概括性的总结，以便需要之时可以查阅。">
@@ -405,7 +405,7 @@
       
 
       
-        <p>前言：Java是一种技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)，本文章对JVM虚拟机(JVM)做一个概括性的总结，以便需要之时可以查阅。<br><a id="more"></a></p>
+        <h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>Java是一种技术，由四方面组成：Java编程语言、Java类文件格式、Java虚拟机和Java应用程序接口(Java API)，本文章对JVM虚拟机(JVM)做一个概括性的总结，以便需要之时可以查阅。<br><a id="more"></a></p>
 <h4 id="（一）JVM的组成"><a href="#（一）JVM的组成" class="headerlink" title="（一）JVM的组成"></a>（一）JVM的组成</h4><p>* Class Loader SubSystem (类加载器)<br>* Runtime Data Areas (运行时数据区)<br>* Execution Engine (执行引擎)<br><img src="/jvm.png" alt="Alt text" title="jvm组成"></p>
 <h4 id="（二）简述各部分的作用"><a href="#（二）简述各部分的作用" class="headerlink" title="（二）简述各部分的作用"></a>（二）简述各部分的作用</h4><h5 id="Class-Loader-SubSystem"><a href="#Class-Loader-SubSystem" class="headerlink" title="Class Loader SubSystem"></a>Class Loader SubSystem</h5><p>装载.class字节码到Java 虚拟机中，读取 Java 字节代码，并转换成 java.lang.Class类的一个实例。通过此实例的 newInstance()方法就可以创建出该类的一个对象。<br>类装载器的组成：<br>（1）引导类加载器（bootstrap class loader）：用来加载 Java 的核心库。<br>（2）扩展类加载器（extensions class loader）：用来加载 Java 的扩展库。<br>（3）系统类加载器（system class loader）：根据Java应用的类路径（CLASSPATH）来加载Java 类。一般来说，Java应用的类都是由它来完成加载的。</p>
 <h5 id="Runtime-Data-Areas"><a href="#Runtime-Data-Areas" class="headerlink" title="Runtime Data Areas"></a>Runtime Data Areas</h5><p>运行时数据区指JVM在运行期间，其对计算机内存空间的划分和分配。<br>运行时数据区组成有：<br>（1）Method Area：方法区（主要有运行时常量池、类型信息、字段信息、方法信息、类变量，指向class实例的引用。存储已被虚拟机加载的类信息、常量、静态变量，即编译器变异后的代码等数据）<br>（2）heap：堆,用来保存对象的实例<br>（3）Stack Area：虚拟机栈（为每个运行的Java方法创建一个栈帧，来存储局部变量表、操作栈、动态链接、方法出口、返回值等）<br>（4）PC：指令计数器<br>（5）Native Method Stack：本地方法栈（调用本地方法时创建，和VM stack相似）</p>
@@ -476,6 +476,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/28/MyBatis原理简述/" rel="prev" title="MyBatis原理简述">
+                MyBatis原理简述 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -568,7 +572,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -577,7 +581,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -586,7 +590,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -621,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#（一）JVM的组成"><span class="nav-number">1.</span> <span class="nav-text">（一）JVM的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（二）简述各部分的作用"><span class="nav-number">2.</span> <span class="nav-text">（二）简述各部分的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Class-Loader-SubSystem"><span class="nav-number">2.1.</span> <span class="nav-text">Class Loader SubSystem</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Runtime-Data-Areas"><span class="nav-number">2.2.</span> <span class="nav-text">Runtime Data Areas</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Execution-Engine"><span class="nav-number">2.3.</span> <span class="nav-text">Execution Engine</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（三）Jvm生命周期"><span class="nav-number">3.</span> <span class="nav-text">（三）Jvm生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（四）GC回收机制"><span class="nav-number">4.</span> <span class="nav-text">（四）GC回收机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、基本垃圾回收算法"><span class="nav-number">4.1.</span> <span class="nav-text">1、基本垃圾回收算法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#按照基本回收的算法分"><span class="nav-number">4.1.1.</span> <span class="nav-text">按照基本回收的算法分</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#按照分区对待的方式分"><span class="nav-number">4.1.2.</span> <span class="nav-text">按照分区对待的方式分</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#按照系统线程分"><span class="nav-number">4.1.3.</span> <span class="nav-text">按照系统线程分</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、自动内存回收机制"><span class="nav-number">4.2.</span> <span class="nav-text">2、自动内存回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、创建对象申请内存的过程"><span class="nav-number">4.3.</span> <span class="nav-text">3、创建对象申请内存的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#新生代："><span class="nav-number">4.3.1.</span> <span class="nav-text">新生代：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#老年代："><span class="nav-number">4.3.2.</span> <span class="nav-text">老年代：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#持久代："><span class="nav-number">4.3.3.</span> <span class="nav-text">持久代：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、GC的分类"><span class="nav-number">4.4.</span> <span class="nav-text">4、GC的分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5、一道常见题目"><span class="nav-number">4.5.</span> <span class="nav-text">5、一道常见题目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6、内存溢出与内存泄漏"><span class="nav-number">4.6.</span> <span class="nav-text">6、内存溢出与内存泄漏</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#内存溢出Out-of-Memory（OOM）"><span class="nav-number">4.6.1.</span> <span class="nav-text">内存溢出Out of Memory（OOM）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#内存泄漏Memory-leak"><span class="nav-number">4.6.2.</span> <span class="nav-text">内存泄漏Memory leak</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#内存泄漏、溢出的异同？"><span class="nav-number">4.6.3.</span> <span class="nav-text">内存泄漏、溢出的异同？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#如何应对内存泄漏、溢出："><span class="nav-number">4.6.4.</span> <span class="nav-text">如何应对内存泄漏、溢出：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（一）JVM的组成"><span class="nav-number">2.</span> <span class="nav-text">（一）JVM的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（二）简述各部分的作用"><span class="nav-number">3.</span> <span class="nav-text">（二）简述各部分的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Class-Loader-SubSystem"><span class="nav-number">3.1.</span> <span class="nav-text">Class Loader SubSystem</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Runtime-Data-Areas"><span class="nav-number">3.2.</span> <span class="nav-text">Runtime Data Areas</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Execution-Engine"><span class="nav-number">3.3.</span> <span class="nav-text">Execution Engine</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（三）Jvm生命周期"><span class="nav-number">4.</span> <span class="nav-text">（三）Jvm生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（四）GC回收机制"><span class="nav-number">5.</span> <span class="nav-text">（四）GC回收机制</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、基本垃圾回收算法"><span class="nav-number">5.1.</span> <span class="nav-text">1、基本垃圾回收算法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#按照基本回收的算法分"><span class="nav-number">5.1.1.</span> <span class="nav-text">按照基本回收的算法分</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#按照分区对待的方式分"><span class="nav-number">5.1.2.</span> <span class="nav-text">按照分区对待的方式分</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#按照系统线程分"><span class="nav-number">5.1.3.</span> <span class="nav-text">按照系统线程分</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、自动内存回收机制"><span class="nav-number">5.2.</span> <span class="nav-text">2、自动内存回收机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、创建对象申请内存的过程"><span class="nav-number">5.3.</span> <span class="nav-text">3、创建对象申请内存的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#新生代："><span class="nav-number">5.3.1.</span> <span class="nav-text">新生代：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#老年代："><span class="nav-number">5.3.2.</span> <span class="nav-text">老年代：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#持久代："><span class="nav-number">5.3.3.</span> <span class="nav-text">持久代：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、GC的分类"><span class="nav-number">5.4.</span> <span class="nav-text">4、GC的分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5、一道常见题目"><span class="nav-number">5.5.</span> <span class="nav-text">5、一道常见题目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6、内存溢出与内存泄漏"><span class="nav-number">5.6.</span> <span class="nav-text">6、内存溢出与内存泄漏</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#内存溢出Out-of-Memory（OOM）"><span class="nav-number">5.6.1.</span> <span class="nav-text">内存溢出Out of Memory（OOM）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#内存泄漏Memory-leak"><span class="nav-number">5.6.2.</span> <span class="nav-text">内存泄漏Memory leak</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#内存泄漏、溢出的异同？"><span class="nav-number">5.6.3.</span> <span class="nav-text">内存泄漏、溢出的异同？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#如何应对内存泄漏、溢出："><span class="nav-number">5.6.4.</span> <span class="nav-text">如何应对内存泄漏、溢出：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
