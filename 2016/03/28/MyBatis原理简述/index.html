@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="API介绍MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
+<meta name="description" content="API介绍　　MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyBatis原理简述">
 <meta property="og:url" content="https://sunnyvinson.github.io/2016/03/28/MyBatis原理简述/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
-<meta property="og:description" content="API介绍MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
-<meta property="og:updated_time" content="2017-02-27T16:40:41.161Z">
+<meta property="og:description" content="API介绍　　MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
+<meta property="og:updated_time" content="2017-03-01T05:05:50.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyBatis原理简述">
-<meta name="twitter:description" content="API介绍MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
+<meta name="twitter:description" content="API介绍　　MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。">
 
 
 
@@ -402,10 +402,10 @@
       
 
       
-        <h4 id="API介绍"><a href="#API介绍" class="headerlink" title="API介绍"></a>API介绍</h4><p>MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。</p>
+        <h4 id="API介绍"><a href="#API介绍" class="headerlink" title="API介绍"></a>API介绍</h4><p>　　MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。</p>
 <a id="more"></a>
-<h4 id="主要特征"><a href="#主要特征" class="headerlink" title="主要特征"></a>主要特征</h4><p>MyBatis中接口中的方法和命名空间的sql语句绑定。可以称为面向接口编程，也是其核心。</p>
-<h4 id="运行原理简述"><a href="#运行原理简述" class="headerlink" title="运行原理简述"></a>运行原理简述</h4><p>概括：Mybatis通过xml或注解的方式将要执行的statement配置起来，并通过Java对象和statement中的sql进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射成java对象并返回。<br>1、mybatis配置<br>Configuration.xml，此文件作为mybatis的全局配置文件，配置了mybatis的运行环境等信息。<br>mapper.xml文件即sql映射文件，可以用别名配置多个。文件中配置了操作数据库的sql语句。此文件需要在SqlMapConfig.xml中加载<br>使用<mappers><mapperresource=””><mappers><br>2、 通过Mybatis环境等配置信息构造SqlSessionFactory即会话工厂。<br>3、 由会话工厂创建sqlSession即会话，操作数据库需要通过sqlSession进行。<br>4、getMapper(接口.class)，找到对应的命名空间。创建接口对象。<br>5、sql映射文件的SQL语句对应接口的方法，当接口对象调用相应的方法时，就会执行相应的sql语句。<br>6、将Java对象映射成相应的记录。<br>7、事务提交。<br>8、关闭SqlSession。</mappers></mapperresource=””></mappers></p>
+<h4 id="主要特征"><a href="#主要特征" class="headerlink" title="主要特征"></a>主要特征</h4><p>　　MyBatis中接口中的方法和命名空间的sql语句绑定。可以称为面向接口编程，也是其核心。</p>
+<h4 id="运行原理简述"><a href="#运行原理简述" class="headerlink" title="运行原理简述"></a>运行原理简述</h4><p>　　概括：Mybatis通过xml或注解的方式将要执行的statement配置起来，并通过Java对象和statement中的sql进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射成java对象并返回。<br>1、mybatis配置<br>Configuration.xml，此文件作为mybatis的全局配置文件，配置了mybatis的运行环境等信息。<br>mapper.xml文件即sql映射文件，可以用别名配置多个。文件中配置了操作数据库的sql语句。此文件需要在SqlMapConfig.xml中加载<br>使用<mappers><mapperresource=””><mappers><br>2、 通过Mybatis环境等配置信息构造SqlSessionFactory即会话工厂。<br>3、 由会话工厂创建sqlSession即会话，操作数据库需要通过sqlSession进行。<br>4、getMapper(接口.class)，找到对应的命名空间。创建接口对象。<br>5、sql映射文件的SQL语句对应接口的方法，当接口对象调用相应的方法时，就会执行相应的sql语句。<br>6、将Java对象映射成相应的记录。<br>7、事务提交。<br>8、关闭SqlSession。</mappers></mapperresource=””></mappers></p>
 <h4 id="一些说明"><a href="#一些说明" class="headerlink" title="一些说明"></a>一些说明</h4><p>1、 mybatis底层自定义了Executor执行器接口操作数据库，Executor接口有两个实现，一个是基本执行器、一个是缓存执行器。<br>2、 Mapped Statement也是mybatis一个底层封装对象，它包装了mybatis配置信息及sql映射信息等。mapper.xml文件中一个sql对应一个Mapped Statement对象，sql的id即是Mapped statement的id。<br>3、 Mapped Statement对sql执行输入参数进行定义，包括HashMap、基本类型、pojo，Executor通过 Mapped Statement在执行sql前将输入的java对象映射至sql中，输入参数映射就是jdbc编程中对preparedStatement设置参数。<br>4、Statement对象用于执行不带参数的简单SQL语句。Statement对象用 Connection的方法createStatement创建。</p>
 
       

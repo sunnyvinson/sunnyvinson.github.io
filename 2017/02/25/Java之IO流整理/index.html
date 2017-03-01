@@ -87,7 +87,7 @@
 
 
 
-<meta name="description" content="一、IO流的划分Java中的流，可以从不同的角度进行分类,具体如下：
+<meta name="description" content="一、IO流的划分　　Java中的流，可以从不同的角度进行分类,具体如下：
 
 按照数据流的方向不同可以分为：输入流和输出流。
 按照处理数据单位不同可以分为：字节流和字符流。
@@ -96,7 +96,7 @@
 <meta property="og:title" content="Java之IO流整理">
 <meta property="og:url" content="https://sunnyvinson.github.io/2017/02/25/Java之IO流整理/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
-<meta property="og:description" content="一、IO流的划分Java中的流，可以从不同的角度进行分类,具体如下：
+<meta property="og:description" content="一、IO流的划分　　Java中的流，可以从不同的角度进行分类,具体如下：
 
 按照数据流的方向不同可以分为：输入流和输出流。
 按照处理数据单位不同可以分为：字节流和字符流。
@@ -109,10 +109,10 @@
 <meta property="og:image" content="https://sunnyvinson.github.io/字节输出流.png">
 <meta property="og:image" content="https://sunnyvinson.github.io/字符输入流.png">
 <meta property="og:image" content="https://sunnyvinson.github.io/字符输出流.png">
-<meta property="og:updated_time" content="2017-03-01T02:55:41.374Z">
+<meta property="og:updated_time" content="2017-03-01T05:02:02.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java之IO流整理">
-<meta name="twitter:description" content="一、IO流的划分Java中的流，可以从不同的角度进行分类,具体如下：
+<meta name="twitter:description" content="一、IO流的划分　　Java中的流，可以从不同的角度进行分类,具体如下：
 
 按照数据流的方向不同可以分为：输入流和输出流。
 按照处理数据单位不同可以分为：字节流和字符流。
@@ -423,7 +423,7 @@
       
 
       
-        <h3 id="一、IO流的划分"><a href="#一、IO流的划分" class="headerlink" title="一、IO流的划分"></a>一、IO流的划分</h3><p>Java中的流，可以从不同的角度进行分类,具体如下：</p>
+        <h3 id="一、IO流的划分"><a href="#一、IO流的划分" class="headerlink" title="一、IO流的划分"></a>一、IO流的划分</h3><p>　　Java中的流，可以从不同的角度进行分类,具体如下：</p>
 <ul>
 <li>按照数据流的方向不同可以分为：输入流和输出流。</li>
 <li>按照处理数据单位不同可以分为：字节流和字符流。</li>
@@ -432,10 +432,10 @@
 </ul>
 <h4 id="1、输入流输出流"><a href="#1、输入流输出流" class="headerlink" title="1、输入流输出流"></a>1、输入流输出流</h4><p>示意图：<br><img src="/输入输出流示意图.png" alt="Alt text" title="输入输出流"></p>
 <h4 id="2、字符流字节流"><a href="#2、字符流字节流" class="headerlink" title="2、字符流字节流"></a>2、字符流字节流</h4><p>字节流：一次读入或读出是8位二进制(即1个字节)。<br>字符流：一次读入或读出是16位二进制(即2个字节)。</p>
-<h5 id="2-1文件存储到磁盘的过程简述"><a href="#2-1文件存储到磁盘的过程简述" class="headerlink" title="2.1文件存储到磁盘的过程简述"></a>2.1文件存储到磁盘的过程简述</h5><p>所有文件的存储都是以二进制（即byte）的形式存储的，在磁盘保存的并不是字符而是先把字符编码成字节，然后存储到磁盘中。在读取文件时，也是一个字节一个字节地读取以形成字节序列。</p>
+<h5 id="2-1文件存储到磁盘的过程简述"><a href="#2-1文件存储到磁盘的过程简述" class="headerlink" title="2.1文件存储到磁盘的过程简述"></a>2.1文件存储到磁盘的过程简述</h5><p>　　所有文件的存储都是以二进制（即byte）的形式存储的，在磁盘保存的并不是字符而是先把字符编码成字节，然后存储到磁盘中。在读取文件时，也是一个字节一个字节地读取以形成字节序列。</p>
 <h5 id="2-2字符流和字节流的比较"><a href="#2-2字符流和字节流的比较" class="headerlink" title="2.2字符流和字节流的比较"></a>2.2字符流和字节流的比较</h5><h6 id="1-处理的数据单位："><a href="#1-处理的数据单位：" class="headerlink" title="(1)处理的数据单位："></a>(1)处理的数据单位：</h6><p>字节流：一次读入或读出是8位二进制(即1个字节)。<br>字符流：一次读入或读出是16位二进制(即2个字节)。</p>
 <h6 id="2-操作的对象："><a href="#2-操作的对象：" class="headerlink" title="(2) 操作的对象："></a>(2) 操作的对象：</h6><p>字节流：可以操作一切文件（原因：所有文件都是以二进制存储在内存中的），包括操作图像、音频、歌曲等等<br>字符流：操作字符、字符数组、字符串，这些纯文本。</p>
-<h6 id="3-操作文件的方式："><a href="#3-操作文件的方式：" class="headerlink" title="(3)操作文件的方式："></a>(3)操作文件的方式：</h6><p>字节流直接操作文件。<br>字符流是通过缓存区操作文件的。<br>注意，使用了各自的输出流对象而没有关闭时，字节流能够输出到文件上，字符流不行，如果要输出就使用flush()。另外在关闭输出流对象时，两者都会强制输出。</p>
+<h6 id="3-操作文件的方式："><a href="#3-操作文件的方式：" class="headerlink" title="(3)操作文件的方式："></a>(3)操作文件的方式：</h6><p>字节流直接操作文件。<br>字符流是通过缓存区操作文件的。<br>　　注意，使用了各自的输出流对象而没有关闭时，字节流能够输出到文件上，字符流不行，如果要输出就使用flush()。另外在关闭输出流对象时，两者都会强制输出。</p>
 <h6 id="4-后缀辨别："><a href="#4-后缀辨别：" class="headerlink" title="(4)后缀辨别："></a>(4)后缀辨别：</h6><p>后缀是Stream的是字节流。<br>后缀是Reader，Writer的是字符流。</p>
 <h4 id="3、节点流处理流"><a href="#3、节点流处理流" class="headerlink" title="3、节点流处理流"></a>3、节点流处理流</h4><p>节点流：直接与数据源相连，读入或读出。<br><img src="/节点流1.png" alt="Alt text" title="节点流"><br>直接使用节点流，读写不方便，为了更快的读写文件，才有了处理流。<br>处理流：与节点流一块使用，在节点流的基础上，再套接一层，套接在节点流上的就是处理流。<br><img src="/节点流2.png" alt="Alt text" title="处理流"></p>
 <h3 id="二、IO流的四大基类"><a href="#二、IO流的四大基类" class="headerlink" title="二、IO流的四大基类"></a>二、IO流的四大基类</h3><p><strong>InputStream(字节输入流)、OutputStream（字节输出流）、Reader（字符输入流）、Writer（字符输出流）。</strong><br><img src="/四大基类.png" alt="Alt text" title="四大基类"></p>
@@ -446,12 +446,12 @@
 <h5 id="简述不同流的适用场景"><a href="#简述不同流的适用场景" class="headerlink" title="简述不同流的适用场景"></a>简述不同流的适用场景</h5><h6 id="1-对文件进行操作："><a href="#1-对文件进行操作：" class="headerlink" title="(1)对文件进行操作："></a>(1)对文件进行操作：</h6><p>FileInputStream（字节输入流），FileOutputStream（字节输出流），FileReader（字符输入流），FileWriter（字符输出流）</p>
 <h6 id="2-对管道进行操作："><a href="#2-对管道进行操作：" class="headerlink" title="(2)对管道进行操作："></a>(2)对管道进行操作：</h6><p>PipedInputStream（字节输入流）,PipedOutStream（字节输出流），PipedReader（字符输入流），PipedWriter（字符输出流）</p>
 <h6 id="3-对字节或者字符数进行操作："><a href="#3-对字节或者字符数进行操作：" class="headerlink" title="(3)对字节或者字符数进行操作："></a>(3)对字节或者字符数进行操作：</h6><p>ByteArrayInputStream，ByteArrayOutputStream，CharArrayReader，CharArrayWriter是在内存中开辟了一个字节或字符数组。</p>
-<h6 id="4-Buffered缓冲流："><a href="#4-Buffered缓冲流：" class="headerlink" title="(4) Buffered缓冲流："></a>(4) Buffered缓冲流：</h6><p>BufferedInputStream，BufferedOutputStream，BufferedReader，BufferedWriter,是带缓冲区的处理流，缓冲区的作用的主要目的是：避免每次和硬盘打交道，提高数据访问的效率。<br>    注意：StringBufferInputStream这个缓冲流已经过时，此类未能正确地将字符转换为字节。从 JDK 1.1 开始，从字符串创建流的首选方法是通过 StringReader 类进行创建。</p>
+<h6 id="4-Buffered缓冲流："><a href="#4-Buffered缓冲流：" class="headerlink" title="(4) Buffered缓冲流："></a>(4) Buffered缓冲流：</h6><p>BufferedInputStream，BufferedOutputStream，BufferedReader，BufferedWriter,是带缓冲区的处理流，缓冲区的作用的主要目的是：避免每次和硬盘打交道，提高数据访问的效率。<br>　　注意：StringBufferInputStream这个缓冲流已经过时，此类未能正确地将字符转换为字节。从 JDK 1.1 开始，从字符串创建流的首选方法是通过 StringReader 类进行创建。</p>
 <h6 id="5-转化流："><a href="#5-转化流：" class="headerlink" title="(5) 转化流："></a>(5) 转化流：</h6><p>InputStreamReader/OutputStreamWriter，把字节转化成字符,创建时传入的参数类型是InputStream/OutputStream（字节流）。</p>
-<h6 id="6-数据流："><a href="#6-数据流：" class="headerlink" title="(6) 数据流："></a>(6) 数据流：</h6><p>DataInputStream，DataOutputStream。<br>因为平时若是我们输出一个8个字节的long类型或4个字节的float类型，那怎么办呢？可以一个字节一个字节输出，也可以把转换成字符串输出，但是这样转换费时间，若是直接输出该多好啊，因此这个数据流就解决了我们输出数据类型的困难。数据流可以直接输出float类型或long类型，提高了数据读写的效率。</p>
+<h6 id="6-数据流："><a href="#6-数据流：" class="headerlink" title="(6) 数据流："></a>(6) 数据流：</h6><p>DataInputStream，DataOutputStream。<br>　　因为平时若是我们输出一个8个字节的long类型或4个字节的float类型，那怎么办呢？可以一个字节一个字节输出，也可以把转换成字符串输出，但是这样转换费时间，若是直接输出该多好啊，因此这个数据流就解决了我们输出数据类型的困难。数据流可以直接输出float类型或long类型，提高了数据读写的效率。</p>
 <h6 id="7-对象流："><a href="#7-对象流：" class="headerlink" title="(7) 对象流："></a>(7) 对象流：</h6><p>ObjectInputStream，ObjectOutputStream，把封装的对象直接输出，而不是一个个在转换成字符串再输出</p>
 <h6 id="8-序列化流："><a href="#8-序列化流：" class="headerlink" title="(8) 序列化流："></a>(8) 序列化流：</h6><p>SequenceInputStream。</p>
-<h6 id="9-对象序列化"><a href="#9-对象序列化" class="headerlink" title="(9) 对象序列化"></a>(9) 对象序列化</h6><p>把对象直接转换成二进制，写入介质中。<br>使用对象流需要实现Serializable接口，否则会报错。而若用transient关键字修饰成员变量，不写入该成员变量，若是引用类型的成员变量为null，值类型的成员变量为0.</p>
+<h6 id="9-对象序列化"><a href="#9-对象序列化" class="headerlink" title="(9) 对象序列化"></a>(9) 对象序列化</h6><p>把对象直接转换成二进制，写入介质中。<br>　　使用对象流需要实现Serializable接口，否则会报错。而若用transient关键字修饰成员变量，不写入该成员变量，若是引用类型的成员变量为null，值类型的成员变量为0.</p>
 <h6 id="10-打印流："><a href="#10-打印流：" class="headerlink" title="(10) 打印流："></a>(10) 打印流：</h6><p>printStream，printWriter。<br>一般是打印到控制台，可以进行控制打印的地方。</p>
 
       

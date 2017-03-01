@@ -87,21 +87,21 @@
 
 
 
-<meta name="description" content="TCP协议TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
-三次握手TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
+<meta name="description" content="TCP协议　　TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
+三次握手　　TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TCP协议三次握手的过程">
 <meta property="og:url" content="https://sunnyvinson.github.io/2016/01/23/TCP协议三次握手的过程/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
-<meta property="og:description" content="TCP协议TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
-三次握手TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
+<meta property="og:description" content="TCP协议　　TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
+三次握手　　TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
 <meta property="og:image" content="https://sunnyvinson.github.io/TCP报文格式.png">
 <meta property="og:image" content="https://sunnyvinson.github.io/TCP三次握手示意图.png">
-<meta property="og:updated_time" content="2017-02-27T14:32:08.628Z">
+<meta property="og:updated_time" content="2017-03-01T05:06:20.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP协议三次握手的过程">
-<meta name="twitter:description" content="TCP协议TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
-三次握手TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
+<meta name="twitter:description" content="TCP协议　　TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。
+三次握手　　TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。">
 <meta name="twitter:image" content="https://sunnyvinson.github.io/TCP报文格式.png">
 
 
@@ -408,14 +408,14 @@
       
 
       
-        <h5 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h5><p>TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p>
-<h5 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h5><p>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。<br><a id="more"></a></p>
+        <h5 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h5><p>　　TCP(Transmission Control Protocol)传输控制协议，是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p>
+<h5 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h5><p>　　TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接。<br><a id="more"></a></p>
 <h5 id="TCP报文格式"><a href="#TCP报文格式" class="headerlink" title="TCP报文格式"></a>TCP报文格式</h5><p>TCP报文格式示意图：<br><img src="/TCP报文格式.png" alt="Alt text" title="TCP报文格式"><br>上图中有几个字段需要重点介绍下：<br>  （1）序号：Seq序号，占32位，用来标识从TCP源端向目的端发送的字节流，发起方发送数据时对此进行标记。<br>  （2）确认序号：ack序号，占32位，只有ACK标志位为1时，确认序号字段才有效，ack=Seq+1。<br>  （3）标志位：共6个，即URG、ACK、PSH、RST、SYN、FIN等，具体含义如下：<br>  （A）URG：紧急指针（urgent pointer）有效。<br>  （B）ACK：确认序号有效。<br>  （C）PSH：接收方应该尽快将这个报文交给应用层。<br>  （D）RST：重置连接。<br>  （E）SYN：发起一个新连接。<br>  （F）FIN：释放一个连接。</p>
 <p>需要注意的是：<br>  （A）不要将确认序号ack与标志位中的ACK搞混了(为了区分，进行大小写，ack为序列号)。<br>  （B）确认方Ack=发起方Seq+1，两端配对。</p>
 <h5 id="TCP三次握手过程"><a href="#TCP三次握手过程" class="headerlink" title="TCP三次握手过程"></a>TCP三次握手过程</h5><p>TCP三次握手示意图如下：<br><img src="/TCP三次握手示意图.png" alt="Alt text" title="TCP三次握手"></p>
-<h6 id="第一次握手"><a href="#第一次握手" class="headerlink" title="第一次握手:"></a>第一次握手:</h6><p>客户端发送syn包 (syn=1，seq=j) 到服务器，并进入SYN_SEND状态，等待服务器确认。</p>
-<h6 id="第二次握手"><a href="#第二次握手" class="headerlink" title="第二次握手:"></a>第二次握手:</h6><p>服务器收到syn包，必须确认客户的syn（ack=j+1），同时自己也发送一个SYN包（syn=1，确认序号有效ACK=1，ack=seq+ACK，seq=k），也叫syn+ack包，此时服务器进入SYN_RECV状态。</p>
-<h6 id="第三次握手"><a href="#第三次握手" class="headerlink" title="第三次握手:"></a>第三次握手:</h6><p>客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(包括了ACK=1，ack=seq+ACK) ，此包发送完毕，服务器端收到后，确认seq值与ack=1则连接建立成功。客户端和服务器进入ESTABLISHED状态，完成三次握手，传送数据。</p>
+<h6 id="第一次握手"><a href="#第一次握手" class="headerlink" title="第一次握手:"></a>第一次握手:</h6><p>　　客户端发送syn包 (syn=1，seq=j) 到服务器，并进入SYN_SEND状态，等待服务器确认。</p>
+<h6 id="第二次握手"><a href="#第二次握手" class="headerlink" title="第二次握手:"></a>第二次握手:</h6><p>　　服务器收到syn包，必须确认客户的syn（ack=j+1），同时自己也发送一个SYN包（syn=1，确认序号有效ACK=1，ack=seq+ACK，seq=k），也叫syn+ack包，此时服务器进入SYN_RECV状态。</p>
+<h6 id="第三次握手"><a href="#第三次握手" class="headerlink" title="第三次握手:"></a>第三次握手:</h6><p>　　客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK(包括了ACK=1，ack=seq+ACK) ，此包发送完毕，服务器端收到后，确认seq值与ack=1则连接建立成功。客户端和服务器进入ESTABLISHED状态，完成三次握手，传送数据。</p>
 
       
     </div>

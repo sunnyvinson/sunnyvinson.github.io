@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="static关键字主要有两种作用第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。第二 实现某个方法或属性与类相关联。">
+<meta name="description" content="static关键字主要有两种作用　　第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。　　第二 实现某个方法或属性与类相关联。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java之static关键字">
 <meta property="og:url" content="https://sunnyvinson.github.io/2016/02/27/Java之static关键字/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
-<meta property="og:description" content="static关键字主要有两种作用第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。第二 实现某个方法或属性与类相关联。">
-<meta property="og:updated_time" content="2017-02-27T15:58:12.768Z">
+<meta property="og:description" content="static关键字主要有两种作用　　第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。　　第二 实现某个方法或属性与类相关联。">
+<meta property="og:updated_time" content="2017-03-01T05:07:22.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java之static关键字">
-<meta name="twitter:description" content="static关键字主要有两种作用第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。第二 实现某个方法或属性与类相关联。">
+<meta name="twitter:description" content="static关键字主要有两种作用　　第一 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。　　第二 实现某个方法或属性与类相关联。">
 
 
 
@@ -402,7 +402,7 @@
       
 
       
-        <h4 id="static关键字主要有两种作用"><a href="#static关键字主要有两种作用" class="headerlink" title="static关键字主要有两种作用"></a>static关键字主要有两种作用</h4><p><strong>第一</strong> 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。<br><strong>第二</strong> 实现某个方法或属性与类相关联。</p>
+        <h4 id="static关键字主要有两种作用"><a href="#static关键字主要有两种作用" class="headerlink" title="static关键字主要有两种作用"></a>static关键字主要有两种作用</h4><p>　　<strong>第一</strong> 为某特定数据类型或对象分配单一的存储空间，而与创建对象的个数无关。<br>　　<strong>第二</strong> 实现某个方法或属性与类相关联。</p>
 <a id="more"></a>
 <h4 id="具体用法"><a href="#具体用法" class="headerlink" title="具体用法"></a>具体用法</h4><p>如下：</p>
 <h5 id="static成员变量"><a href="#static成员变量" class="headerlink" title="static成员变量"></a>static成员变量</h5><ul>
@@ -420,7 +420,7 @@
 <h5 id="static内部类"><a href="#static内部类" class="headerlink" title="static内部类"></a>static内部类</h5><ul>
 <li>OuterClassObject.new InnerClassName()，如果省略了OuterClassObject则是this. new InnerClassName(),OuterClassObject或者this指代创建这个内部类对象的一个外部类对象，是一个隐式参数，它将传入内部类的构造方法(见前所述)。但是现在这个内部类对象是由“类”直接创建的，不会产生这样的一个隐式参数传入内部类构造方法，因此内部类也就不需要“编译器自动给内部类加上一个reference，指向产生它的那个外部类的对象”，所以我们把这个内部类声明为static。</li>
 </ul>
-<h5 id="不允许在函数内部定义static变量"><a href="#不允许在函数内部定义static变量" class="headerlink" title="不允许在函数内部定义static变量"></a>不允许在函数内部定义static变量</h5><p>根据上文可以得知，在Java语言中，不能在成员函数内部定义static变量，以下代码将会编译失败：</p>
+<h5 id="不允许在函数内部定义static变量"><a href="#不允许在函数内部定义static变量" class="headerlink" title="不允许在函数内部定义static变量"></a>不允许在函数内部定义static变量</h5><p>　　根据上文可以得知，在Java语言中，不能在成员函数内部定义static变量，以下代码将会编译失败：</p>
 <p><pre><code><br>class CT{<br>public void testStatic(){<br>        static int i=0;  //编译失败<br>        System.out.println(i++);<br>    }<br>}<br></code></pre>    </p>
 
       
