@@ -38,9 +38,9 @@
 
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
+      <title><![CDATA[hexo + next 使用手册]]></title>
       <url>%2F2016%2F01%2F18%2Fhello-world%2F</url>
-      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Themes configuration hexo框架下Next主题配置 ：http://theme-next.iissnan.com/ fontawesome图标 ：http://fontawesome.io/icons/ Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Themes configuration hexo框架使用 : https://fzy-line.github.io/categories/Hexo/ next主题配置 ：http://theme-next.iissnan.com/ fontawesome图标 ：http://fontawesome.io/icons/ Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
     </entry>
 
     
