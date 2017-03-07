@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
 <meta property="og:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
-<meta property="og:updated_time" content="2017-03-07T04:29:00.610Z">
+<meta property="og:updated_time" content="2017-03-07T05:22:09.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL之权限管理">
 <meta name="twitter:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
@@ -406,6 +406,7 @@
 <p><strong>查看当前使用的账户</strong><br>show processlist;</p>
 <p><strong>查看数据库的所有用户</strong><br>select * from mysql.user;<br>或者<br>use mysql;<br>select * from user;</p>
 <p><strong>查看某个用户具有的权限</strong><br>show grants for ‘用户名’@’登入地址’;<br>例如：show grants for ‘yy’@’localhost’;</p>
+<p><strong>修改用户密码</strong><br>update user set password=password(‘新密码’) where user = ‘用户名’;</p>
 <h3 id="MySQL数据库的权限管理"><a href="#MySQL数据库的权限管理" class="headerlink" title="MySQL数据库的权限管理"></a>MySQL数据库的权限管理</h3><p>　　windows中MySQL以服务形式存在，在使用前应确保此服务已经启动，未启动可用net start mysql命令启动，或者进入控制面板中的服务设置。<br>　　Linux中启动时可用“/etc/rc.d/init.d/mysqld start”命令，注意启动者应具有管理员权限。<br>    MySQL的用户管理是通过User表来实现的，添加新用户常用的方法有两个，一是在User表插入相应的数据行，同时设置相应的权限；二是通过GRANT命令创建具有某种权限的用户。</p>
 <h4 id="GRANT的语法"><a href="#GRANT的语法" class="headerlink" title="GRANT的语法"></a>GRANT的语法</h4><p>grant [权限] on [在哪些数据库/表] to [新用户名称]@[登入地址] identified by [“密码”];<br>– usage只允许登入<br>grant usage on <em>.</em> to NewUserName@HostName identified by “password”;<br>– 授予全部权限<br>grant all on mydb.* to NewUserName@HostName identified by “password” ;<br>– 授予select insert update权限，作用范围在mydb数据库下的所有表<br>grant select,insert,update on mydb.* to NewUserName@HostName identified by “password”;<br>– 授予pdate、delete权限，作用范围在mydb数据库下的TestTable<br>grant update,delete on mydb.TestTable to NewUserName@HostName identified by “password”;</p>
 <h4 id="CREATE的语法"><a href="#CREATE的语法" class="headerlink" title="CREATE的语法"></a>CREATE的语法</h4><p>首先创建用户：create user [新建的用户名]@[登入地址] identified by [‘密码’];<br>然后授权：grant [权限，可以多项] on [在哪些数据库/表]  to [新用户名称]@[登入地址];</p>
@@ -484,6 +485,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/07/MySQL之设置事务提交类型/" rel="prev" title="MySQL之设置事务提交类型">
+                MySQL之设置事务提交类型 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -576,7 +581,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -594,7 +599,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
