@@ -563,7 +563,7 @@
 
       
         
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。<br>
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2016/11/07/MySQL之权限管理/#more" rel="contents">
@@ -720,17 +720,14 @@
 
       
         
-          
-            <h4 id="查看MySQL数据库的事务提交类型"><a href="#查看MySQL数据库的事务提交类型" class="headerlink" title="查看MySQL数据库的事务提交类型"></a>查看MySQL数据库的事务提交类型</h4><p>　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;<br>Autocommit=0代表手动提交，Autocommit=1代表自动提交。</p>
-<h4 id="设置事务提交类型的方式法"><a href="#设置事务提交类型的方式法" class="headerlink" title="设置事务提交类型的方式法"></a>设置事务提交类型的方式法</h4><p>　　设置MySQL数据为手动提交事务：有两种，一时是时性的，只在当前窗口有效，关闭MySQL客户端窗口就失效了，另一个是永久性的。</p>
-<h5 id="临时性的"><a href="#临时性的" class="headerlink" title="临时性的"></a>临时性的</h5><p><pre><code><br>　　登入root账户；<br>　　use mysql;<br>　　set autocommit=0;<br></code></pre>
-　</p>
-<p>说明：这种修改只在当前窗口有效，关闭即失效。使用select @@autocommit;便可以看见autocommit=0。</p>
-<h5 id="永久性的"><a href="#永久性的" class="headerlink" title="永久性的"></a>永久性的</h5><p>　修改MySQL安装目录下的配置文件my.ini，在[mysqld]这行下面加上init_connect=’SET AUTOCOMMIT=1’</p>
-<p>说明：修改my.ini之后，重启MySQL数据组件，重新登入root账户，select @@autocommit; 发现autocommit = 1; 登入非管理员账户，会发小autocommit = 0; 但是事务提交类型已经修改为手动提交。这是由于MySQL版本的诱因引起的。</p>
-<p>注意：不论是那种修改,创建数据库create  database和创建表create table后没有commit， 这个操作都还是执行，关闭数据库后重开，这些新建的数据库和表都还在。而如果是增删改表中的数据后没有commit，那么，手动提交事务级别的操作是没有效果的，自动提交事务级别的操作是有效的。</p>
-
-          
+          <h4 id="查看MySQL数据库的事务提交类型"><a href="#查看MySQL数据库的事务提交类型" class="headerlink" title="查看MySQL数据库的事务提交类型"></a>查看MySQL数据库的事务提交类型</h4><p>　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;<br>Autocommit=0代表手动提交，Autocommit=1代表自动提交。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/11/06/MySQL之设置事务提交类型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

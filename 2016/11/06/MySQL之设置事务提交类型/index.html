@@ -87,22 +87,16 @@
 
 
 
-<meta name="description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。
-设置事务提交类型的方式法　　设置MySQL数据为手动提交事务：有两种，一时是时性的，只在当前窗口有效，关闭MySQL客户端窗口就失效了，另一个是永久性的。
-临时性的　　登入root账户；">
+<meta name="description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL之设置事务提交类型">
 <meta property="og:url" content="https://sunnyvinson.github.io/2016/11/06/MySQL之设置事务提交类型/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
-<meta property="og:description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。
-设置事务提交类型的方式法　　设置MySQL数据为手动提交事务：有两种，一时是时性的，只在当前窗口有效，关闭MySQL客户端窗口就失效了，另一个是永久性的。
-临时性的　　登入root账户；">
-<meta property="og:updated_time" content="2017-03-07T05:48:31.466Z">
+<meta property="og:description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。">
+<meta property="og:updated_time" content="2017-03-07T07:04:58.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL之设置事务提交类型">
-<meta name="twitter:description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。
-设置事务提交类型的方式法　　设置MySQL数据为手动提交事务：有两种，一时是时性的，只在当前窗口有效，关闭MySQL客户端窗口就失效了，另一个是永久性的。
-临时性的　　登入root账户；">
+<meta name="twitter:description" content="查看MySQL数据库的事务提交类型　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;Autocommit=0代表手动提交，Autocommit=1代表自动提交。">
 
 
 
@@ -409,6 +403,7 @@
 
       
         <h4 id="查看MySQL数据库的事务提交类型"><a href="#查看MySQL数据库的事务提交类型" class="headerlink" title="查看MySQL数据库的事务提交类型"></a>查看MySQL数据库的事务提交类型</h4><p>　　MySQL数据库默认是自动提交事务。查看当前事务类型：select @@autocommit;<br>Autocommit=0代表手动提交，Autocommit=1代表自动提交。</p>
+<a id="more"></a>
 <h4 id="设置事务提交类型的方式法"><a href="#设置事务提交类型的方式法" class="headerlink" title="设置事务提交类型的方式法"></a>设置事务提交类型的方式法</h4><p>　　设置MySQL数据为手动提交事务：有两种，一时是时性的，只在当前窗口有效，关闭MySQL客户端窗口就失效了，另一个是永久性的。</p>
 <h5 id="临时性的"><a href="#临时性的" class="headerlink" title="临时性的"></a>临时性的</h5><p><pre><code><br>　　登入root账户；<br>　　use mysql;<br>　　set autocommit=0;<br></code></pre>
 　</p>

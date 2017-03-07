@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
 <meta property="og:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
-<meta property="og:updated_time" content="2017-03-07T05:48:36.084Z">
+<meta property="og:updated_time" content="2017-03-07T07:04:06.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL之权限管理">
 <meta name="twitter:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
@@ -402,7 +402,9 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。<br><a id="more"></a><br><strong>查看当前使用的数据库</strong><br>select database();</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。</p>
+<a id="more"></a>
+<p><strong>查看当前使用的数据库</strong><br>select database();</p>
 <p><strong>查看当前使用的账户</strong><br>show processlist;</p>
 <p><strong>查看数据库的所有用户</strong><br>select * from mysql.user;<br>或者<br>use mysql;<br>select * from user;</p>
 <p><strong>查看某个用户具有的权限</strong><br>show grants for ‘用户名’@’登入地址’;<br>例如：show grants for ‘yy’@’localhost’;</p>
