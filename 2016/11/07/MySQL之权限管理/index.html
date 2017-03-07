@@ -90,10 +90,10 @@
 <meta name="description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL之权限管理">
-<meta property="og:url" content="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/index.html">
+<meta property="og:url" content="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/index.html">
 <meta property="og:site_name" content="ζ°≡ 爪哇攻城狮">
 <meta property="og:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
-<meta property="og:updated_time" content="2017-03-07T05:22:09.600Z">
+<meta property="og:updated_time" content="2017-03-07T05:48:36.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL之权限管理">
 <meta name="twitter:description" content="前言　　在实际开发中，基于安全性考虑，不应该只用root用户进行连接数据库，虽然使用root用户进行测试时很方便，但是使用root时，因为一些误操作而产生的影响，那将会是很大的。对DBA而言，不同的使用者授予不同权限，会是比较恰当的处理方法。例如：一个只进行数据插入的用户不应赋予其删除数据的权限。一个只能查看数据的用户不授予增删改的权限。">
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/"/>
+  <link rel="canonical" href="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/"/>
 
 
 
@@ -290,7 +290,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/">
+  <link itemprop="mainEntityOfPage" href="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="isunnyvinson">
@@ -329,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-06T13:08:12+08:00">
-                2017-03-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-07T13:08:12+08:00">
+                2016-11-07
               </time>
             
 
@@ -370,8 +370,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/06/MySQL之权限管理/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/MySQL之权限管理/" itemprop="commentCount"></span>
+                <a href="/2016/11/07/MySQL之权限管理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/07/MySQL之权限管理/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -476,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/25/Java之IO流整理/" rel="next" title="Java之IO流整理">
-                <i class="fa fa-chevron-left"></i> Java之IO流整理
+              <a href="/2016/11/06/MySQL之设置事务提交类型/" rel="next" title="MySQL之设置事务提交类型">
+                <i class="fa fa-chevron-left"></i> MySQL之设置事务提交类型
               </a>
             
           </div>
@@ -486,8 +486,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/07/MySQL之设置事务提交类型/" rel="prev" title="MySQL之设置事务提交类型">
-                MySQL之设置事务提交类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/25/Java之IO流整理/" rel="prev" title="Java之IO流整理">
+                Java之IO流整理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -503,10 +503,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/06/MySQL之权限管理/"
+        <div class="ds-share flat" data-thread-key="2016/11/07/MySQL之权限管理/"
      data-title="MySQL之权限管理"
      data-content=""
-     data-url="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/">
+     data-url="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -533,8 +533,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/06/MySQL之权限管理/"
-           data-title="MySQL之权限管理" data-url="https://sunnyvinson.github.io/2017/03/06/MySQL之权限管理/">
+      <div class="ds-thread" data-thread-key="2016/11/07/MySQL之权限管理/"
+           data-title="MySQL之权限管理" data-url="https://sunnyvinson.github.io/2016/11/07/MySQL之权限管理/">
       </div>
     
   </div>
